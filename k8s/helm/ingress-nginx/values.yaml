@@ -153,7 +153,7 @@ controller:
     # -- Enable 'scope' or not
     enabled: false
     # -- Namespace to limit the controller to; defaults to $(POD_NAMESPACE)
-    namespace: ""
+    namespace: "ingress-nginx"
     # -- When scope.enabled == false, instead of watching all namespaces, we watching namespaces whose labels
     # only match with namespaceSelector. Format like foo=bar. Defaults to empty, means watching all namespaces.
     namespaceSelector: ""

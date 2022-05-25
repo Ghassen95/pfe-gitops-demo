@@ -1,4 +1,4 @@
-package tn.esprit.spring.services;
+package tn.tekup.spring.services;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import tn.esprit.spring.entities.User;
-import tn.esprit.spring.repository.UserRepository;
+import tn.tekup.spring.entities.User;
+import tn.tekup.spring.repository.UserRepository;
 
 @Service
 public class UserServiceImpl implements IUserService {

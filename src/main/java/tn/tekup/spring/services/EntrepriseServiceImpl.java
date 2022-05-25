@@ -1,4 +1,4 @@
-package tn.esprit.spring.services;
+package tn.tekup.spring.services;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import tn.esprit.spring.entities.Entreprise;
-import tn.esprit.spring.repository.EntrepriseRepository;
+import tn.tekup.spring.entities.Entreprise;
+import tn.tekup.spring.repository.EntrepriseRepository;
 
 @Service
 public class EntrepriseServiceImpl implements IEntrepriseService {

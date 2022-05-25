@@ -1,8 +1,8 @@
-package tn.esprit.spring.services;
+package tn.tekup.spring.services;
 
 import java.util.List;
 
-import tn.esprit.spring.entities.Entreprise;
+import tn.tekup.spring.entities.Entreprise;
 
 public interface IEntrepriseService {
 	List<Entreprise> retrieveAllEntreprises(); 

@@ -30,8 +30,25 @@ jobs:
     steps:
     - name: Checkout the code
       uses: actions/checkout@v3
+    - name: Set up JDK 8
+      uses: actions/setup-java@v3
+      with:
+        java-version: "8"
+        distribution: "zulu"
+        cache: maven
+        
+    - name: Cache local Maven repository
+      uses: actions/cache@v3
+      with:
+        path: ~/.m2/repository
+        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+        restore-keys: |
+          ${{ runner.os }}-maven-
+    - name: Build and force snapshot updates with Maven
+      run: |
+        mvn -B package --file pom.xml -DskipTests
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag localbuild/testimage:latest
+      run: docker build . --file Dockerfile 
     - name: Run the Anchore scan action itself with GitHub Advanced Security code scanning integration enabled
       uses: anchore/scan-action@b08527d5ae7f7dc76f9621edb6e49eaf47933ccd
       with:

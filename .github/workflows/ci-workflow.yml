@@ -74,8 +74,7 @@ jobs:
           login-server: ${{ secrets.AZURE_ACR }}
           username: ${{ secrets.AZURE_ACR_USERNAME }}
           password: ${{ secrets.AZURE_ACR_PASSWORD }}
-      - name: build and tag image- name: Push image
-        run: |
+      - name: build and tag image
         run: |
           docker build . -t ${{ secrets.AZURE_ACR }}/pfe-gitops-demo:${{ steps.project_version.outputs.PROJECT_VERSION }}
           docker image tag ${{ secrets.AZURE_ACR }}/pfe-gitops-demo:${{ steps.project_version.outputs.PROJECT_VERSION }} ${{ secrets.AZURE_ACR }}/pfe-gitops-demo:latest

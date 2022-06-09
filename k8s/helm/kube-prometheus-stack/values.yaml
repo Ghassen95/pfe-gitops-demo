@@ -1391,7 +1391,7 @@ kube-state-metrics:
       #   action: replace
 
   selfMonitor:
-    enabled: true
+    enabled: false
 
 ## Deploy node exporter as a daemonset to all nodes
 ##

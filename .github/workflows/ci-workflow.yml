@@ -78,12 +78,13 @@ jobs:
         run: |
           docker build . -t ${{ secrets.AZURE_ACR }}/pfe-gitops-demo:${{ steps.project_version.outputs.PROJECT_VERSION }}
           docker image tag ${{ secrets.AZURE_ACR }}/pfe-gitops-demo:${{ steps.project_version.outputs.PROJECT_VERSION }} ${{ secrets.AZURE_ACR }}/pfe-gitops-demo:latest
-      - name: Scan image
-        uses: Azure/container-scan@v0
-        with:
-          image-name: ${{ secrets.AZURE_ACR }}/pfe-gitops-demo:${{ steps.project_version.outputs.PROJECT_VERSION }}
-          severity-threshold: CRITICAL
-          run-quality-checks: true 
+      #Scan image before publish
+      #- name: Scan image
+       # uses: Azure/container-scan@v0
+        #with:
+         # image-name: ${{ secrets.AZURE_ACR }}/pfe-gitops-demo:${{ steps.project_version.outputs.PROJECT_VERSION }}
+          #severity-threshold: CRITICAL
+          #run-quality-checks: true 
       - name: Push image
         run: |
           docker push --all-tags ${{ secrets.AZURE_ACR }}/pfe-gitops-demo

@@ -21,10 +21,9 @@ public class ContratRestControl {
 	IContratService contractService;
 	// URL : http://localhost:6868/timesheet-devops/retrieve-all-contracts
 	@GetMapping("/retrieve-all-contracts")
-	public String retrieveAllContracts() {
+	public List<Contrat> retrieveAllContracts() {
 		List<Contrat> list = contractService.retrieveAllContracts();
-		
-		return "<h1>hello</h1>";
+		return list;
 	}
 	// http://localhost:6868/timesheet-devops/retrieve-contract/{contract-id}
 	@GetMapping("/retrieve-contract/{contract-id}")

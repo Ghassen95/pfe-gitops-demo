@@ -19,14 +19,14 @@ spec:
           service:
             name: pfe-gitops-app-lb
             port:
-              number: 8080
+              number: 8082
       - path: /actuator/health
         pathType: Prefix
         backend:
           service:
             name: pfe-gitops-app-lb
             port:
-              number: 8080
+              number: 8082
   tls:
   - hosts:
     - pfe-adactim-app.eastus.cloudapp.azure.com

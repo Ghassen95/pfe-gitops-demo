@@ -9,9 +9,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>tn.tekup.spring</groupId>
+	<groupId>tn.esprit.spring</groupId>
 	<artifactId>pfe-gitops-demo</artifactId>
-	<version>1.24</version>
+	<version>1.27</version>
 	<description>PFE GitOps demo app</description>
 
 	<properties>

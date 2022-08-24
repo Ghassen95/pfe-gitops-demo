@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pfe-gitops-app-ingress
+  namespace: gitops
+  annotations:
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    cert-manager.io/cluster-issuer: letsencrypt
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: pfe-gitops-devsecops.eastus.cloudapp.azure.com
+    http:
+      paths:
+      - path: /app(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: pfe-gitops-app-lb
+            port:
+              number: 8080
+  tls:
+  - hosts:
+    - pfe-gitops-devsecops.eastus.cloudapp.azure.com
+    secretName: tls-secret

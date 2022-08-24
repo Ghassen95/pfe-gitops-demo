@@ -1,4 +1,4 @@
-package tn.esprit.spring;
+package tn.tekup.spring;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
-import tn.esprit.spring.services.UserServiceImpl;
+import tn.tekup.spring.services.UserServiceImpl;
 
 @SpringBootApplication
 @EnableAutoConfiguration

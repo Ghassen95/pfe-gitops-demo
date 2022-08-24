@@ -1,4 +1,4 @@
-package tn.esprit.spring.control;
+package tn.tekup.spring.control;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import tn.esprit.spring.entities.Departement;
-import tn.esprit.spring.services.IDepartementService;
+import tn.tekup.spring.entities.Departement;
+import tn.tekup.spring.services.IDepartementService;
 
 @RestController
 public class DepartementRestControl {

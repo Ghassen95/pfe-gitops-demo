@@ -1,4 +1,4 @@
-package tn.esprit.spring;
+package tn.tekup.spring;
 
 import java.text.ParseException;
 import java.util.List;
@@ -10,9 +10,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import tn.esprit.spring.entities.Departement;
-import tn.esprit.spring.services.DepartementServiceImpl;
-import tn.esprit.spring.services.IDepartementService;
+import tn.tekup.spring.entities.Departement;
+import tn.tekup.spring.services.DepartementServiceImpl;
+import tn.tekup.spring.services.IDepartementService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.runner.RunWith;

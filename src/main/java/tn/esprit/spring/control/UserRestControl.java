@@ -1,4 +1,4 @@
-package tn.esprit.spring.control;
+package tn.tekup.spring.control;
 
 import java.util.List;
 
@@ -14,8 +14,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 
-import tn.esprit.spring.entities.User;
-import tn.esprit.spring.services.IUserService;
+import tn.tekup.spring.entities.User;
+import tn.tekup.spring.services.IUserService;
 
 // userRestControl
 @RestController // = @Controller + @ResponseBody 

@@ -1,9 +1,9 @@
-package tn.esprit.spring.repository;
+package tn.tekup.spring.repository;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import tn.esprit.spring.entities.User;
+import tn.tekup.spring.entities.User;
 
 @Repository
 public interface UserRepository extends  CrudRepository<User, Long> { 

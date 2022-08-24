@@ -9,7 +9,7 @@
 		<relativePath />
 	</parent>
 
-	<groupId>tn.esprit.spring</groupId>
+	<groupId>tn.tekup.spring</groupId>
 	<artifactId>pfe-gitops-demo</artifactId>
 	<version>1.183</version>
 	<description>PFE GitOps demo app</description>
@@ -122,7 +122,7 @@
 		<repository>
 		  <id>github</id>
 		  <name>GitHub Packages</name>
-		  <url>https://maven.pkg.github.com/AhmedFouratTouzri/pfe-gitops-demo</url>
+		  <url>https://maven.pkg.github.com/Ghassen95/pfe-gitops-demo</url>
 		</repository>
 	  </distributionManagement>
 </project>

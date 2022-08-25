@@ -1,0 +1,216 @@
+apiVersion: v1
+entries:
+  cert-manager:
+  - annotations:
+      artifacthub.io/prerelease: "false"
+      artifacthub.io/signKey: |
+        fingerprint: 1020CF3C033D4F35BAE1C19E1226061C665DF13E
+        url: https://cert-manager.io/public-keys/cert-manager-keyring-2021-09-20-1020CF3C033D4F35BAE1C19E1226061C665DF13E.gpg
+    apiVersion: v1
+    appVersion: v1.8.0
+    created: "2022-08-25T13:17:16.200009231-04:00"
+    description: A Helm chart for cert-manager
+    digest: 8b3d50cd4139687d96bab78c4a14139d171faa9240eaa263817889da1bc261b6
+    home: https://github.com/cert-manager/cert-manager
+    icon: https://raw.githubusercontent.com/jetstack/cert-manager/master/logo/logo.png
+    keywords:
+    - cert-manager
+    - kube-lego
+    - letsencrypt
+    - tls
+    maintainers:
+    - email: cert-manager-maintainers@googlegroups.com
+      name: cert-manager-maintainers
+    name: cert-manager
+    sources:
+    - https://github.com/cert-manager/cert-manager
+    urls:
+    - cert-manager-v1.8.0.tgz
+    version: v1.8.0
+  ingress-nginx:
+  - annotations:
+      artifacthub.io/changes: |
+        - "[8481](https://github.com/kubernetes/ingress-nginx/pull/8481) Fix log creation in chroot script"
+        - "[8479](https://github.com/kubernetes/ingress-nginx/pull/8479) changed nginx base img tag to img built with alpine3.14.6"
+        - "[8478](https://github.com/kubernetes/ingress-nginx/pull/8478) update base images and protobuf gomod"
+        - "[8468](https://github.com/kubernetes/ingress-nginx/pull/8468) Fallback to ngx.var.scheme for redirectScheme with use-forward-headers when X-Forwarded-Proto is empty"
+        - "[8456](https://github.com/kubernetes/ingress-nginx/pull/8456) Implement object deep inspector"
+        - "[8455](https://github.com/kubernetes/ingress-nginx/pull/8455) Update dependencies"
+        - "[8454](https://github.com/kubernetes/ingress-nginx/pull/8454) Update index.md"
+        - "[8447](https://github.com/kubernetes/ingress-nginx/pull/8447) typo fixing"
+        - "[8446](https://github.com/kubernetes/ingress-nginx/pull/8446) Fix suggested annotation-value-word-blocklist"
+        - "[8444](https://github.com/kubernetes/ingress-nginx/pull/8444) replace deprecated topology key in example with current one"
+        - "[8443](https://github.com/kubernetes/ingress-nginx/pull/8443) Add dependency review enforcement"
+        - "[8434](https://github.com/kubernetes/ingress-nginx/pull/8434) added new auth-tls-match-cn annotation"
+        - "[8426](https://github.com/kubernetes/ingress-nginx/pull/8426) Bump github.com/prometheus/common from 0.32.1 to 0.33.0"
+      artifacthub.io/prerelease: "false"
+    apiVersion: v2
+    appVersion: 1.2.0
+    created: "2022-08-25T13:17:16.204082693-04:00"
+    description: Ingress controller for Kubernetes using NGINX as a reverse proxy
+      and load balancer
+    digest: 78dc3b23632f663a75318dbaedb7ce535b915f0bae259d15bb4fb6b157cf490f
+    home: https://github.com/kubernetes/ingress-nginx
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/500px-Nginx_logo.svg.png
+    keywords:
+    - ingress
+    - nginx
+    kubeVersion: '>=1.19.0-0'
+    maintainers:
+    - name: rikatz
+    - name: strongjz
+    - name: tao12345666333
+    name: ingress-nginx
+    sources:
+    - https://github.com/kubernetes/ingress-nginx
+    type: application
+    urls:
+    - ingress-nginx-4.1.1.tgz
+    version: 4.1.1
+  kube-prometheus-stack:
+  - annotations:
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts
+        - name: Upstream Project
+          url: https://github.com/prometheus-operator/kube-prometheus
+      artifacthub.io/operator: "true"
+    apiVersion: v2
+    appVersion: 0.56.2
+    created: "2022-08-25T13:17:16.254170287-04:00"
+    dependencies:
+    - condition: kubeStateMetrics.enabled
+      name: kube-state-metrics
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 4.7.*
+    - condition: nodeExporter.enabled
+      name: prometheus-node-exporter
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 3.1.*
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.29.*
+    description: kube-prometheus-stack collects Kubernetes manifests, Grafana dashboards,
+      and Prometheus rules combined with documentation and scripts to provide easy
+      to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
+      Prometheus Operator.
+    digest: a4b2afbc90173d824261747cf0a47e988bedb7693aa0b4e6b7388e52c44c686f
+    home: https://github.com/prometheus-operator/kube-prometheus
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    keywords:
+    - operator
+    - prometheus
+    - kube-prometheus
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: andrew@quadcorps.co.uk
+      name: andrewgkew
+    - name: bismarck
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: github.gkarthiks@gmail.com
+      name: gkarthiks
+    - email: kube-prometheus-stack@sisti.pt
+      name: GMartinez-Sisti
+    - email: scott@r6by.com
+      name: scottrigby
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    name: kube-prometheus-stack
+    sources:
+    - https://github.com/prometheus-community/helm-charts
+    - https://github.com/prometheus-operator/kube-prometheus
+    type: application
+    urls:
+    - kube-prometheus-stack-35.3.1.tgz
+    version: 35.3.1
+  loki:
+  - apiVersion: v1
+    appVersion: v2.6.1
+    created: "2022-08-25T13:17:16.257822762-04:00"
+    description: 'Loki: like Prometheus, but for logs.'
+    digest: e3fb665326540cf3caf04e80f1d443a2c0159b37890baab87afbcf7fff71f0e8
+    home: https://grafana.com/loki
+    icon: https://raw.githubusercontent.com/grafana/loki/master/docs/sources/logo.png
+    kubeVersion: ^1.10.0-0
+    maintainers:
+    - email: lokiproject@googlegroups.com
+      name: Loki Maintainers
+    name: loki
+    sources:
+    - https://github.com/grafana/loki
+    urls:
+    - loki-2.14.1.tgz
+    version: 2.14.1
+  prometheus-blackbox-exporter:
+  - apiVersion: v2
+    appVersion: 0.20.0
+    created: "2022-08-25T13:17:16.260767878-04:00"
+    description: Prometheus Blackbox Exporter
+    digest: 8f6b32485f67f06f1912f8183ac3cc5749e1031c79da728f5362bfeaeb2eafe6
+    home: https://github.com/prometheus/blackbox_exporter
+    keywords:
+    - prometheus
+    - blackbox
+    - monitoring
+    maintainers:
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: me@sota.sh
+      name: rsotnychenko
+    - email: monotek23@gmail.com
+      name: monotek
+    name: prometheus-blackbox-exporter
+    sources:
+    - https://github.com/prometheus/blackbox_exporter
+    - https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-blackbox-exporter
+    type: application
+    urls:
+    - prometheus-blackbox-exporter-5.8.2.tgz
+    version: 5.8.2
+  promtail:
+  - apiVersion: v2
+    appVersion: 2.6.1
+    created: "2022-08-25T13:17:16.262813255-04:00"
+    description: Promtail is an agent which ships the contents of local logs to a
+      Loki instance
+    digest: 3187e4ccf1b72c7671dc8b464bf7de0dfb17ad07d6748735bcba5d3c1ed8b4fc
+    home: https://grafana.com/loki
+    icon: https://raw.githubusercontent.com/grafana/loki/master/docs/sources/logo.png
+    maintainers:
+    - email: lokiproject@googlegroups.com
+      name: Loki Maintainers
+    - name: unguiculus
+    name: promtail
+    sources:
+    - https://github.com/grafana/loki
+    - https://grafana.com/oss/loki/
+    - https://grafana.com/docs/loki/latest/
+    type: application
+    urls:
+    - promtail-6.3.0.tgz
+    version: 6.3.0
+  secrets-store-csi-driver:
+  - apiVersion: v2
+    appVersion: 1.1.2
+    created: "2022-08-25T13:17:16.26409856-04:00"
+    description: A Helm chart to install the SecretsStore CSI Driver inside a Kubernetes
+      cluster.
+    digest: 7165e7d1c4f3f2f2305710bb824c7b0df7a6e72409e2a8998e8fa096453d9307
+    icon: https://github.com/kubernetes/kubernetes/blob/master/logo/logo.png
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: ritazh@microsoft.com
+      name: Rita Zhang
+    name: secrets-store-csi-driver
+    sources:
+    - https://github.com/kubernetes-sigs/secrets-store-csi-driver
+    urls:
+    - secrets-store-csi-driver-1.1.2.tgz
+    version: 1.1.2
+generated: "2022-08-25T13:17:16.195078996-04:00"

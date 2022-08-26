@@ -20,13 +20,13 @@ ingress:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
     cert-manager.io/cluster-issuer: letsencrypt
   hosts:
-    - host: pfe-gitops-devsecops.eastus.cloudapp.azure.com
+    - host: pfe-adactim.eastus.cloudapp.azure.com
       paths: 
         - /loki
   tls: 
    - secretName: tls-secret
      hosts:
-       - pfe-gitops-devsecops.eastus.cloudapp.azure.com
+       - pfe-adactim.eastus.cloudapp.azure.com
 
 ## Affinity for pod assignment
 ## ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity

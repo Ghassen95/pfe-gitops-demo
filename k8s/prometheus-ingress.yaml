@@ -11,7 +11,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: pfe-gitops-devsecops.eastus.cloudapp.azure.com
+  - host: pfe-adactim.eastus.cloudapp.azure.com
     http:
       paths:
       - path: /prometheus/?(.*)
@@ -23,5 +23,5 @@ spec:
               name: http-web
   tls:
   - hosts:
-    - pfe-gitops-devsecops.eastus.cloudapp.azure.com
+    - pfe-adactim.eastus.cloudapp.azure.com
     secretName: tls-secret

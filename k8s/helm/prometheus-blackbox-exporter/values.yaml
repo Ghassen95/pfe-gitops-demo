@@ -183,14 +183,14 @@ ingress:
     kubernetes.io/tls-acme: "true"
     nginx.ingress.kubernetes.io/use-regex: "true"
   hosts:
-    - host: pfe-gitops-devsecops.eastus.cloudapp.azure.com
+    - host: pfe-adactim.eastus.cloudapp.azure.com
       paths:
         - path: /(blackbox-exporter|probe.*|metrics.*|config|logs.*)
           pathType: ImplementationSpecific
   tls: 
    - secretName: tls-secret
      hosts:
-       - pfe-gitops-devsecops.eastus.cloudapp.azure.com
+       - pfe-adactim.eastus.cloudapp.azure.com
 
 podAnnotations: {}
 
@@ -233,7 +233,7 @@ serviceMonitor:
 
   targets:
    - name: pfe-gitops-app                    # Human readable URL that will appear in Prometheus / AlertManager
-     url: https://pfe-gitops-devsecops.eastus.cloudapp.azure.com/app/actuator/health  # The URL that blackbox will scrape
+     url: https://pfe-adactim.eastus.cloudapp.azure.com/app/actuator/health  # The URL that blackbox will scrape
      labels: {}                       # Map of labels for ServiceMonitor. Overrides value set in `defaults`
      interval: 15s                    # Scraping interval. Overrides value set in `defaults`
      scrapeTimeout: 60s               # Scrape timeout. Overrides value set in `defaults`

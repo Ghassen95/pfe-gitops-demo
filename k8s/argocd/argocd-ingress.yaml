@@ -26,5 +26,5 @@ spec:
         pathType: Prefix
   tls:
   - hosts:
-    - pfe-gitops-devsecops.eastus.cloudapp.azure.com
+    - pfe-adactim.eastus.cloudapp.azure.com
     secretName: tls-secret
